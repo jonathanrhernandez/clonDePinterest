@@ -1,0 +1,237 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+  }
+/*Header*/
+header{
+    display: grid;
+    grid-template-columns: 1fr 4fr 1fr;  
+    padding: 10px;  
+    background-color: #fff;
+    padding-bottom: 20px;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;    
+}
+.navLeft{
+    grid-column: 1 / 2;    
+    display: grid;
+    grid-template-columns: 45px 75px 90px 70px;
+}
+.navLeft1{
+    grid-column: 1 / 2;
+}
+.navLeft1 img{
+    width: 24px;
+    height: 24px;
+    padding: 10px;
+    border-radius: 50%;
+}
+.navLeft1 img:hover {
+    background-color: rgba(128, 128, 128, 0.2);
+}
+.navLeft2{
+    grid-column: 2 / 3;  
+}
+.navLeft2, .navLeft3, .navLeft4 {    
+    font-weight: 550;
+}
+.inicio,.navLeft3, .navLeft4 {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+.inicio{
+    color: white;
+    background-color: black;        
+    height: 45px;
+    border-radius: 24px;  
+    width: 65px;  
+}
+.navLeft3{
+    grid-column: 3 / 4;    
+}
+.navLeft3 div{
+    width: 6px;
+    height: 6px;
+    background-color: red;    
+    margin-left: 4px;    
+}
+.navLeft4{
+    grid-column: 4 / 5;    
+}
+
+.finderContainer{
+    grid-column: 2 / 3;
+    height: 48px;
+    background-color: #e9e9e9;
+    border-radius: 24px;
+}
+.finderContainer:hover{
+    background-color: #e1e1e1;
+}
+.lupa img {
+    width: 16px;
+    height: 16px;
+    float: left;
+    margin-right: 8px;
+    margin-top: 15px;
+    margin-left: 5px;
+}
+.finder{
+    border: none;    
+    background-color: transparent;
+    color: #333;
+    font-size: 16px;
+    font-weight: normal;
+    height: 48px;
+    outline: none;
+    padding: 0;
+    width: 95%;
+}
+.navRight{
+    grid-column: 3 / 4;
+    margin-left: 20px;
+}
+#navbar-pinterest{
+    display: flex;    
+}
+#navbar-pinterest div{
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#cuentas{
+    width: 30px !important;
+    height: 30px !important;
+    
+}
+.cuentas span{
+    color: #5f5f5f;    
+}
+#navbar-pinterest div:hover{
+    background-color: rgba(128, 128, 128, 0.2);
+    cursor: pointer;
+}
+#navbar-pinterest div img{    
+    cursor: pointer;
+    border-radius: 50%;
+    height: 24px;
+}
+.perfil img{
+    width: 24px;    
+}
+.cuentas img{
+    height: 15px;
+}
+/*Main*/
+  main {
+    padding: 20px;
+    margin-top: 70px;
+  }
+ #content{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;    
+ } 
+ .contentIMage{
+    position: relative;
+ }
+ .card-image{
+    cursor: zoom-in;
+    height: 337px;
+    width: 236px;
+ }
+ .guardar{
+    opacity: 1;
+    height: 337px;
+    width: 236px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .3);
+    display: none;
+    
+    pointer-events: none;
+ }
+ .card-image:hover + .guardar {
+    display: block;        
+ }
+ .card-image img{
+    height: 337px;
+    width: 236px;
+ }
+.divbtn{
+    margin-right: 12px;
+    min-height: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;   
+    margin-top: 10px;    
+}
+.divbtn button{
+    min-width: 60px;
+    height: 30px;
+    border: 0;
+    border-radius: 24px;
+    vertical-align: middle;
+    background-color: red;
+    color: #fff;    
+}
+.iconos{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    height: 290px;    
+}
+.upload, .plus{
+    width: 32px;
+    height: 32px;
+    background-color: #dfd5da;
+    margin-left: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 24px;
+}
+.plus{
+    margin-right: 5px;
+}
+.upload img, .plus img{
+    width: 16px;
+    height: 16px;
+}
+
+
+@media only screen and (max-width: 767px) {
+    /* Estilos específicos para pantallas pequeñas */
+    .card-image{
+        height: 150px;
+        width: 219px;
+     }
+    .card-image img{
+        height: 150px;
+        width: 219px;
+     }
+     .guardar{
+        height: 150px;
+        width: 219px;
+     }
+     .iconos{
+        height: 100px ;
+     }
+  }
+  
+   
+  
+  
+  
